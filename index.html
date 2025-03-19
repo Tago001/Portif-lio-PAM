@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-content">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>Portfolio</span>
+            </div>
+            <a href="#home" class="nav-link active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#projects" class="nav-link">
+                <i class="fas fa-project-diagram"></i>
+                <span>Projetos de PAM</span>
+            </a>
+            <a href="#more-projects" class="nav-link">
+                <i class="fas fa-laptop-code"></i>
+                <span>Projetos de Dart</span>
+            </a>
+            <a href="#contact" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                <span>Contato</span>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="page">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Thiago Fernando - Portfólio</h1>
+                    <p class="subtitle">2DS Turma B</p>
+                </div>
+            </div>
+            <div class="glass-container">
+                <div class="about-box glass-effect">
+                    <div class="about-content">
+                        <h2>Sobre Mim</h2>
+                        <p>Olá! Sou um estudante de Desenvolvimento de Sistemas apaixonado por tecnologia e programação. 
+                           Tenho conhecimentos em Front-End e Back-End e estou sempre buscando novos desafios para aprimorar minhas habilidades.
+                           Sou dedicado, estudioso e focado em evoluir constantemente, explorando diferentes áreas do desenvolvimento 
+                           para criar projetos cada vez mais eficientes e inovadores. 🚀</p>
+                        <div class="skills">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="glass-footer">
+                <p>2025 Meu Portfólio. Todos os direitos reservados. &copy;</p>
+            </footer>
+        </section>
+
+        <!-- Projetos PAM -->
+        <section id="projects" class="page">
+            <div class="section-header glass-effect">
+                <h2>Projetos de PAM</h2>
+                <p>Esses foram meus trabalhos até o momento</p>
+            </div>
+            
+            <div class="project-grid">
+                <!-- Projeto 1 -->
+                <div class="project-showcase mobile-project">
+                    <div class="project-carousel glass-effect">
+                        <div class="carousel-container">
+                            <img src="assets/Tela Login.png" alt="Projeto 1">
+                            <img src="assets/Tela Home.png" alt="Projeto 1">
+                            <img src="assets/Tela Rei Leao.png" alt="Projeto 1">
+                        </div>
+                        <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="project-details glass-effect">
+                        <h3>Aplicativo de Filmes</h3>
+                        <p>Um aplicativo de filmes desenvolvido com React Native e foi feito de forma rápida e prática.
+                           O app possui uma funcionalidade de Login e uma Home Page com uma lista de filmes.
+                            Cada filme possui uma página com uma breve sinopse e um cartaz.</p>
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Tela de Login</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Validação de Login</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sistema de Autenticação</span>
+                            </div>
+                        </div>
+                        <a href="https://snack.expo.dev/@tago001/pamavaliacao" class="expo-link">
+                            <i class="fas fa-mobile-alt"></i>
+                            Abrir no Expo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="project-showcase mobile-project">
+                    <div class="project-carousel glass-effect">
+                        <div class="carousel-container">
+                            <img src="assets/Tela Inicial Nav.png" alt="Imagem 1">
+                            <img src="assets/Tela React Nav.png" alt="Imagem 2">
+                            <img src="assets/Tela Angular Nav.png" alt="Imagem 3">
+                        </div>
+                        <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="project-details glass-effect">
+                        <h3>Aplicativo de Navegação</h3>
+                        <p>Um aplicativo de Navegações de Tela Básico feito em React Native pelo Expo.
+                            Ele permite navegar entre telas de forma simples e prática, com uma Home.
+                            Contem as páginas com informações sobre 6 Frameworks de Front-End.</p>
+                        </p>                        
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Navegação de Telas</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Home Intuitiva</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Botão de Home</span>
+                            </div>
+                        </div>
+                        <a href="https://snack.expo.dev/@tago001/navegacaodetelas_thiago" class="expo-link">
+                            <i class="fas fa-mobile-alt"></i>
+                            Abrir no Expo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="project-showcase mobile-project">
+                    <div class="project-carousel glass-effect">
+                        <div class="carousel-container">
+                            <img src="assets/Calculadora.png" alt="Projeto 3">
+                        </div>
+                        <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="project-details glass-effect">
+                        <h3>Calculadora</h3>
+                        <p>Um exemplo de calculadora básico que tivemos na aula de Funções.
+                            Foi feito em React Native e possui as operações básicas de uma calculadora.</p>
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Calculadora Básica</span>
+                            </div>
+
+                        </div>
+                        <a href="https://snack.expo.dev/@tago001/exemplofuncoes_thiago" class="expo-link">
+                            <i class="fas fa-mobile-alt"></i>
+                            Abrir no Expo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="glass-footer">
+                <p>2025 Meu Portfólio. Todos os direitos reservados.&copy; </p>
+            </footer>
+        </section>
+
+        <!-- Projetos de Dart -->
+        <section id="more-projects" class="page">
+            <div class="section-header glass-effect">
+                <h2>Projetos de Dart</h2>
+                <p>Aplicativos em Dart pelo DartPad</p>
+            </div>
+
+            <div class="project-grid">
+                <!-- Projeto 4 -->
+                <div class="project-showcase mobile-project">
+                    <div class="project-carousel glass-effect">
+                        <div class="carousel-container">
+                            <img src="assets/Salario Dart.png" alt="Projeto 4">
+                        </div>
+                    </div>
+                    <div class="project-details glass-effect">
+                        <h3>Código para Calcular Salário</h3>
+                        <p>Código desenvolvido em Dart para fazer o cálculo de salário de um funcionário
+                            com base na quantidade de horas trabalhadas e o valor por hora.
+                            O código é simples e eficiente, mostrando o salário bruto e liquido do funcionário.
+                        </p>
+                </div>
+
+                <!-- Projeto 5 -->
+                <div class="project-showcase mobile-project">
+                    <div class="project-carousel glass-effect">
+                        <div class="carousel-container">
+                            <img src="assets/Triangulo Dart.png" alt="Projeto 5">
+                        </div>
+                    </div>
+                    <div class="project-details glass-effect">
+                        <h3>Área de um Triangulo</h3>
+                        <p>Código desenvolvido em Dar para fazer o cálculo da area de um triangulo
+                            com base na base e altura informadas pelo usuário.
+                            O código é simples e eficiente, mostrando a área do triangulo.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <footer class="glass-footer">
+                <p>2025 Meu Portfólio. Todos os direitos reservados.&copy; </p>
+            </footer>
+        </section>
+
+        <!-- Contato -->
+        <section id="contact" class="page">
+            <div class="contact-container">
+                <div class="contact-header glass-effect">
+                    <h2>Obrigado por visitar meu portfólio</h2>
+                    <p>Estou sempre aberto para novas oportunidades de trabalho e colaboração</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info glass-effect">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Localização</h3>
+                                <p>São josé dos Campos, Brasil</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>thiagofer.inacio@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Telefone</h3>
+                                <p>+55 (12) 99110-2899</p>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                <div class="social-links glass-effect">
+                    <a href="https://github.com/Tago001" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                        <p>Confira meus repositórios</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thiago-fernando001/" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                        <p>Confira meu Linkedin</p>
+                    </a>
+                    </a>
+                </div>
+            </div>
+
+            <footer class="glass-footer">
+                <p>2025 Meu Portfólio. Todos os direitos reservados.&copy; </p>
+            </footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
