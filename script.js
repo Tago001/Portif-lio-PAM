@@ -22,12 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
             currentIndex = (currentIndex + 1) % images.length;
             updateCarousel();
         });
-
-        // Auto-play
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateCarousel();
-        }, 5000);
     });
 
     const navLinks = document.querySelectorAll('.nav-link');
