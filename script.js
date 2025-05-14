@@ -1,60 +1,54 @@
-
-document.addEventListener('DOMContentLoaded', () => {
-    const carousels = document.querySelectorAll('.project-carousel');
-    
-    carousels.forEach(carousel => {
-        const container = carousel.querySelector('.carousel-container');
-        const images = container.querySelectorAll('img');
-        const prevBtn = carousel.querySelector('.prev');
-        const nextBtn = carousel.querySelector('.next');
-        let currentIndex = 0;
-
-        function updateCarousel() {
-            container.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateCarousel();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateCarousel();
-        });
-    });
-
+document.addEventListener('DOMContentLoaded', function () {
+    // Navigation active state
+    const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
-    
-    function updateActiveLink() {
+
+    function setActiveLink() {
         const hash = window.location.hash || '#home';
+
         navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === hash);
+            link.classList.remove('active');
+            if (link.getAttribute('href') === hash) {
+                link.classList.add('active');
+            }
+        });
+
+        // If no hash, show home by default
+        if (!window.location.hash) {
+            document.querySelector('#home').style.display = 'block';
+        }
+    }
+
+    // Set initial active state
+    setActiveLink();
+
+    // Update active state on hash change
+    window.addEventListener('hashchange', setActiveLink);
+
+    // Mobile sidebar toggle
+    const showSidebarBtn = document.querySelector('.show-sidebar');
+    const sidebar = document.querySelector('.sidebar');
+    const main = document.querySelector('main');
+
+    if (showSidebarBtn) {
+        showSidebarBtn.addEventListener('click', function () {
+            sidebar.classList.toggle('collapsed');
+            main.classList.toggle('collapsed');
         });
     }
 
-    window.addEventListener('hashchange', updateActiveLink);
-    updateActiveLink();
+    // Auto-collapse sidebar on small screens
+    function checkScreenSize() {
+        if (window.innerWidth <= 768) {
+            sidebar.classList.add('collapsed');
+            main.classList.add('collapsed');
+        } else {
+            sidebar.classList.remove('collapsed');
+            main.classList.remove('collapsed');
+        }
+    }
 
-    document.querySelectorAll('.page').forEach(page => {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * 0.5;
-            
-            if (page.style.backgroundImage) {
-                page.style.backgroundPosition = `center ${-rate}px`;
-            }
-        });
-    });
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-            }
-        });
-    });
-
-    document.querySelectorAll('.project-showcase, .about-box, .contact-header, .contact-content, .social-links').forEach((el) => {
-        observer.observe(el);
-    });
+    // Check on page load and resize
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
 });
